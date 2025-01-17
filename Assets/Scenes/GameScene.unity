@@ -445,6 +445,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1986455224868142016, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
+      propertyPath: tomatoPrefab
+      value: 
+      objectReference: {fileID: 3507330081128637240, guid: f1de443e603c2ac4c837d3aa2a0266ed, type: 3}
+    - target: {fileID: 1986455224868142016, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e677b1e05c423344870f2609520066c, type: 2}
     - target: {fileID: 4556391568141380882, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.865289
@@ -877,37 +885,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2109478190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!114 &2119773964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1986455224868142016, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
+  m_PrefabInstance: {fileID: 582057510}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2109478191}
-  m_Layer: 0
-  m_Name: Tomato
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2109478191
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109478190}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17000002, y: 0.5047495, z: 2.62613}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c0ef77d0378c6343a7a2bf373c97ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7889755271744999889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,6 +908,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 1986455224868142016, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986455224868142016, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
+      propertyPath: secondClearCounter
+      value: 
+      objectReference: {fileID: 2119773964}
     - target: {fileID: 4556391568141380882, guid: 170d6fb8d31b2ac409908320fa2c5c00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.17
@@ -978,4 +974,3 @@ SceneRoots:
   - {fileID: 2029279680}
   - {fileID: 7889755271744999889}
   - {fileID: 582057510}
-  - {fileID: 2109478191}

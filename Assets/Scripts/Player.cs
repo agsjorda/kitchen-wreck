@@ -1,14 +1,12 @@
 using System;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
 
     public static Player Instance { get; private set; }
 
     public event EventHandler<OnSelectedCounterChangeEventArgs> OnSelectedCounterChange;
-    public class OnSelectedCounterChangeEventArgs : EventArgs
-    {
+    public class OnSelectedCounterChangeEventArgs : EventArgs {
         public ClearCounter selectedCounter;
     }
 
@@ -23,8 +21,7 @@ public class Player : MonoBehaviour
     private Vector3 lastInteractDir;
     private ClearCounter selectedCounter;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (Instance != null) {
             Debug.LogError("There is more than one Player instance in the scene");
         }
@@ -32,32 +29,27 @@ public class Player : MonoBehaviour
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    void Start() {
         gameInput.OnInteractAction += GameInput_OnInteractAction;
     }
 
-    private void GameInput_OnInteractAction(object sender, EventArgs e)
-    {
+    private void GameInput_OnInteractAction(object sender, EventArgs e) {
         if (selectedCounter != null) {
             selectedCounter.InterAct();
         }
     }
 
     // Update is called once per frame
-    private void Update()
-    {
+    private void Update() {
         HandleMovment();
         HandleInteractions();
     }
 
 
-    public bool IsWalking()
-    {
+    public bool IsWalking() {
         return isWalking;
     }
-    private void HandleInteractions()
-    {
+    private void HandleInteractions() {
         inputVector = gameInput.GetMovementInputNormalized();
         Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
 
@@ -78,11 +70,9 @@ public class Player : MonoBehaviour
         } else {
             SetSelectedCounter(null);
         }
-        Debug.Log(selectedCounter);
     }
 
-    private void HandleMovment()
-    {
+    private void HandleMovment() {
 
         inputVector = gameInput.GetMovementInputNormalized();
 
@@ -123,8 +113,7 @@ public class Player : MonoBehaviour
 
     }
 
-    private void SetSelectedCounter(ClearCounter selectedCounter)
-    {
+    private void SetSelectedCounter(ClearCounter selectedCounter) {
         this.selectedCounter = selectedCounter;
         OnSelectedCounterChange?.Invoke(this, new OnSelectedCounterChangeEventArgs { selectedCounter = selectedCounter });
     }
